@@ -63,6 +63,6 @@ class ResponseApiController {
     @DeleteMapping("/{id}")
     fun deleteMapping(@PathVariable id:Int): ResponseEntity<Any>{
         return ResponseEntity.status(500).body(null)
-
     }
+
 }

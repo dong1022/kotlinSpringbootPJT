@@ -28,7 +28,7 @@ class GetApiController {
     fun pathVariable2(@PathVariable(value = "name") _name: String, @PathVariable(name = "age") age:Int):String{
         val name = "kotlin" // =====> 상단의 pathVariable에 파라미터인 name이 val name과 중복이 되면 PathVariable속성중 하나인 value 또는 name을 사용하여 uri에
                             //있는 파라미터이름을 value 또는 name에 넣어주면 PathVariable의 이름이 uri 파라미터 네임과 달라도 매핑이 가능함
-        println("${_name}, ${age}")
+        println("${name}, ${age}")
         return _name+" "+age
     }
 
@@ -52,6 +52,7 @@ class GetApiController {
     fun queryParamMap(@RequestParam map: Map<String,Any>): Map<String, Any> {
         println(map)
         val phoneNum = map.get("phone-num")
+        println(phoneNum)
         return map
     }
 }

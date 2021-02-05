@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.ResponseBody
 @Controller
 class PageController {
 
+    //@Controller의 주 용도는 view(화면)을 리턴하는것이고, @RestController의 경우 데이터를 리턴하는 것이 주 용도라고 할 수 있다.
+    //@Controller의 경우 @ResponseBody를 사용하여 객체를 리턴할 수 있다.
+
     // http://localhost:8080/main
     @GetMapping("/main")
     fun main(): String{
